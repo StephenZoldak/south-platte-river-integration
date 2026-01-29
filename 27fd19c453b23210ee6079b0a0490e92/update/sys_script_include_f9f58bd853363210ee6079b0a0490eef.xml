@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_876517_south_p_0.SouthPlatteWaterUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>SouthPlatteWaterUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var SouthPlatteWaterUtils = Class.create();
+SouthPlatteWaterUtils.prototype = {
+    initialize: function() {},
+
+    /**
+     * Orchestrates the full process: Fetch, Parse, and Save
+     */
+    runIntegration: function() {
+        gs.info("SZ - Starting South Platte Water Integration run.");
+        try {
+            // 1. Execute the REST Call
+            var restCall = new sn_ws.RESTMessageV2('South Platte Rest Call', 'Default GET');
+            var response = restCall.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            gs.info("SZ - HTTP Status Code received: " + httpStatus);
+
+            if (httpStatus !== 200) {
+                gs.info("SZ - USGS API returned a non-200 status. Stopping process.");
+                return;
+            }
+
+            // 2. Parse the JSON
+            var waterData = this.parseWaterData(responseBody);
+
+            // 3. Insert into Table
+            if (waterData) {
+                return this.createWaterRecord(waterData);
+            } else {
+                gs.info("SZ - No water data parsed. Record will not be created.");
+            }
+        } catch (ex) {
+            gs.info("SZ - Critical Exception in runIntegration: " + ex.message);
+        }
+    },
+
+    /**
+     * Extracts flow and gage height from the messy USGS JSON structure
+     */
+    parseWaterData: function(responseBody) {
+        var result = {
+            flow: "0",
+            gage_height: "0",
+            timestamp: ""
+        };
+
+        try {
+            var parsed = JSON.parse(responseBody);
+            var timeSeries = parsed.value.timeSeries;
+
+            gs.info("SZ - Successfully parsed JSON body. Processing " + timeSeries.length + " data series.");
+
+            timeSeries.forEach(function(series) {
+                var paramCode = series.variable.variableCode[0].value;
+                var latestValue = series.values[0].value[0].value;
+                var time = series.values[0].value[0].dateTime;
+
+                if (paramCode == "00060") {
+                    result.flow = latestValue;
+                    gs.info("SZ - Found Flow Data (00060): " + latestValue + " cfs");
+                } else if (paramCode == "00065") {
+                    result.gage_height = latestValue;
+                    gs.info("SZ - Found Gage Height Data (00065): " + latestValue + " ft");
+                }
+                result.timestamp = time.replace('T', ' ').split('.')[0];
+            });
+
+            return result;
+        } catch (ex) {
+            gs.info("SZ - Error during JSON parsing: " + ex.message);
+            return null;
+        }
+    },
+
+    /**
+     * Inserts the parsed data into your custom table
+     */
+    createWaterRecord: function(data) {
+        gs.info("SZ - Attempting to insert record into table: x_876517_south_p_0_south_platte_river_water_data");
+        
+        var gr = new GlideRecord('x_876517_south_p_0_south_platte_river_water_data'); 
+        gr.initialize();
+        
+        gr.station_id = "06701900"; // Deckers Site ID
+        gr.station_name = "South Platte River at Deckers";
+        gr.discharge = data.flow;
+        gr.gage_height = data.gage_height;
+        gr.u_measured_at = data.timestamp;
+        
+        var sysID = gr.insert();
+        
+        if (sysID) {
+            gs.info("SZ - Success! Water data record created. SysID: " + sysID);
+        } else {
+            gs.info("SZ - Database insert failed. Check table permissions or field names.");
+        }
+        
+        return sysID;
+    },
+
+    type: 'SouthPlatteWaterUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-28 18:58:56</sys_created_on>
+        <sys_id>f9f58bd853363210ee6079b0a0490eef</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SouthPlatteWaterUtils</sys_name>
+        <sys_package display_value="South Platte Water Monitor" source="x_876517_south_p_0">27fd19c453b23210ee6079b0a0490e92</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="South Platte Water Monitor">27fd19c453b23210ee6079b0a0490e92</sys_scope>
+        <sys_update_name>sys_script_include_f9f58bd853363210ee6079b0a0490eef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-28 19:22:49</sys_updated_on>
+    </sys_script_include>
+</record_update>

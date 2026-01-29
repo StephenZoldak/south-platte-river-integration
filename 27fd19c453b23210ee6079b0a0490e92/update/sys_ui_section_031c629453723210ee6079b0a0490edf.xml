@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="031c629453723210ee6079b0a0490edf" sys_domain="global" table="x_876517_south_p_0_south_platte_river_water_data" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>2d9b879453763210ee6079b0a0490e59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>station_name</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>219b879453763210ee6079b0a0490e5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>station_id</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>e99b879453763210ee6079b0a0490e5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>site_code</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>e99b8fd453763210ee6079b0a0490e9a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>discharge</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>a59b8fd453763210ee6079b0a0490e9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gage_height</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>619b8fd453763210ee6079b0a0490e9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_on</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 19:21:47</sys_created_on>
+            <sys_id>2d9b8fd453763210ee6079b0a0490e9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_876517_south_p_0_south_platte_river_water_data" sys_domain="global" view="Default view">031c629453723210ee6079b0a0490edf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 19:21:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_876517_south_p_0_south_platte_river_water_data</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-28 17:04:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>031c629453723210ee6079b0a0490edf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_876517_south_p_0_south_platte_river_water_data</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="South Platte Water Monitor" source="x_876517_south_p_0">27fd19c453b23210ee6079b0a0490e92</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="South Platte Water Monitor">27fd19c453b23210ee6079b0a0490e92</sys_scope>
+            <sys_update_name>sys_ui_section_031c629453723210ee6079b0a0490edf</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-28 17:04:15</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

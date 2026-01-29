@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6e1ce21853723210ee6079b0a0490e64" label="South Platte River Water Data" max_length="40" name="x_876517_south_p_0_south_platte_river_water_data" type="collection">
+        <element label="Gage Height" max_length="40" name="gage_height" type="string"/>
+        <element label="Site Code" max_length="40" name="site_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Station ID" max_length="40" name="station_id" type="string"/>
+        <element label="Station Name" max_length="40" name="station_name" type="string"/>
+        <element label="Raw JSON" max_length="1000" name="raw_json" type="string"/>
+        <element label="discharge" max_length="38" name="discharge" type="decimal"/>
+    </element>
+</database>
